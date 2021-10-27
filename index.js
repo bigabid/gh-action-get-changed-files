@@ -2,46 +2,11 @@
 const fs     = require('fs');
 const github = require('@actions/github');
 const core   = require('@actions/core');
-const util = require('util')
 
+const context = github.context;
+const repo   = github.context.repo;
+const owner = repo.owner;
 
- 
-// console.log(util.inspect(github, false, null, true /* enable colors */));
-// console.log(`github type: ${typeof(github)}`)
-// const context = github.context;
-// console.log(util.inspect(context, false, null, true /* enable colors */));
-// console.log(`context type: ${typeof(context)}`)
-// const Context = context.Context;
-// console.log(util.inspect(Context, false, null, true /* enable colors */));
-// console.log(`Context type: ${typeof(Context)}`)
-// return;
-
-
-
-// const context_str = util.inspect(context, false, null, true /* enable colors */);
-
-
-
-// const context_str = util.inspect(context, false, null, true /* enable colors */);
- 
-// 
-// const context_repository_str = util.inspect(repo, false, null, true /* enable colors */);
-
-// console.log(context_repository_str)
-
-const payload = github.context.payload
-
-const repo_1 = github.context.repo
-
-console.log(repo_1.owner)
-
-if(payload == {}) throw "empty payload"
-
-const repo    = payload.repository;
-
-
-const owner   = repo.owner;
-console.log(owner)
 const FILES          = new Set();
 const FILES_ADDED    = new Set();
 const FILES_MODIFIED = new Set();
