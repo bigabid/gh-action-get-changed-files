@@ -4,8 +4,9 @@ const github = require('@actions/github');
 const core   = require('@actions/core');
 
 const context = github.context;
-const repo   = github.context.repo;
-const owner = repo.owner;
+const repo    = context.repository;
+//const repo    = context.payload.repository;
+const owner   = repo.owner;
 
 const FILES          = new Set();
 const FILES_ADDED    = new Set();

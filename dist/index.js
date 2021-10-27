@@ -354,8 +354,9 @@ const github = __webpack_require__(469);
 const core   = __webpack_require__(470);
 
 const context = github.context;
-const repo   = github.context.repo;
-const owner = repo.owner;
+const repo    = context.repository;
+//const repo    = context.payload.repository;
+const owner   = repo.owner;
 
 const FILES          = new Set();
 const FILES_ADDED    = new Set();
