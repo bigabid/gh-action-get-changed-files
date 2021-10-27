@@ -8,9 +8,9 @@ const util = require('util')
  
 console.log(util.inspect(github, false, null, true /* enable colors */));
 console.log(`github type: ${typeof(github)}`)
-const context = github.Context;
-console.log(util.inspect(context, false, null, true /* enable colors */));
-console.log(`github type: ${typeof(context)}`)
+const payload = github.payload;
+console.log(util.inspect(payload, false, null, true /* enable colors */));
+console.log(`github type: ${typeof(payload)}`)
 
 // return;
 
