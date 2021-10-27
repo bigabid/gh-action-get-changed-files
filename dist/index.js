@@ -390,8 +390,11 @@ if(payload == {}) throw "empty payload"
 const repo    = payload.repository;
 
 
+
 const owner   = repo.owner;
 console.log(owner)
+return;
+
 const FILES          = new Set();
 const FILES_ADDED    = new Set();
 const FILES_MODIFIED = new Set();
