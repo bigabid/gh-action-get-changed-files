@@ -2,10 +2,12 @@
 const fs     = require('fs');
 const github = require('@actions/github');
 const core   = require('@actions/core');
+const util = require('util')
 
 const context = github.context;
 
-console.log(github)
+console.log(util.inspect(github, false, null, true /* enable colors */))
+
 const repo    = context.repository;
 const owner   = repo.owner;
 

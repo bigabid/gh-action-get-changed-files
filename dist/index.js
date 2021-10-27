@@ -352,6 +352,7 @@ exports.issueCommand = issueCommand;
 const fs     = __webpack_require__(747);
 const github = __webpack_require__(469);
 const core   = __webpack_require__(470);
+const util = __webpack_require__(669)
 
 const context = github.context;
 
