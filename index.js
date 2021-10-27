@@ -4,7 +4,7 @@ const github = require('@actions/github');
 const core   = require('@actions/core');
 
 const context = github.context;
-const repo    = context.payload.repository;
+const repo    = context.repository;
 const owner   = repo.owner;
 
 const FILES          = new Set();
