@@ -5,8 +5,8 @@ const core   = require('@actions/core');
 const util = require('util')
 
 const context = github.context;
-
-console.log(util.inspect(github, false, null, true /* enable colors */))
+const x=util.inspect(github, false, null, true /* enable colors */)
+console.log(x)
 
 const repo    = context.repository;
 const owner   = repo.owner;
