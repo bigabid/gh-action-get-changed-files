@@ -355,7 +355,8 @@ const core   = __webpack_require__(470);
 
 const context = github.context;
 
-console.log(github)
+console.log(util.inspect(github, false, null, true /* enable colors */))
+
 const repo    = context.repository;
 const owner   = repo.owner;
 
