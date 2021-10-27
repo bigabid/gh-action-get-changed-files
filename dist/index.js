@@ -358,10 +358,12 @@ const util = __webpack_require__(669)
  
 console.log(util.inspect(github, false, null, true /* enable colors */));
 console.log(`github type: ${typeof(github)}`)
-const payload = github.payload;
-console.log(util.inspect(payload, false, null, true /* enable colors */));
-console.log(`github type: ${typeof(payload)}`)
-
+const context = github.context;
+console.log(util.inspect(context, false, null, true /* enable colors */));
+console.log(`context type: ${typeof(context)}`)
+const Context = context.Context;
+console.log(util.inspect(Context, false, null, true /* enable colors */));
+console.log(`Context type: ${typeof(Context)}`)
 // return;
 
 
