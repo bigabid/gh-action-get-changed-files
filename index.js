@@ -4,6 +4,8 @@ const github = require('@actions/github');
 const core   = require('@actions/core');
 
 const context = github.context;
+
+console.log(github)
 const repo    = context.repository;
 const owner   = repo.owner;
 
