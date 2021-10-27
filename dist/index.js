@@ -354,11 +354,17 @@ const github = __webpack_require__(469);
 const core   = __webpack_require__(470);
 const util = __webpack_require__(669)
 
-const context = github.context;
-const x=util.inspect(github, false, null, true /* enable colors */)
-console.log(x)
+const context = github.Context.payload;
 
+const context_str = util.inspect(context, false, null, true /* enable colors */)
+ 
 const repo    = context.repository;
+const context_repository_str = util.inspect(repo, false, null, true /* enable colors */)
+
+console.log(context_repository_str)
+
+
+
 const owner   = repo.owner;
 
 const FILES          = new Set();

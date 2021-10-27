@@ -4,11 +4,17 @@ const github = require('@actions/github');
 const core   = require('@actions/core');
 const util = require('util')
 
-const context = github.context;
-const x=util.inspect(github, false, null, true /* enable colors */)
-console.log(x)
+const context = github.Context.payload;
 
+const context_str = util.inspect(context, false, null, true /* enable colors */)
+ 
 const repo    = context.repository;
+const context_repository_str = util.inspect(repo, false, null, true /* enable colors */)
+
+console.log(context_repository_str)
+
+
+
 const owner   = repo.owner;
 
 const FILES          = new Set();
